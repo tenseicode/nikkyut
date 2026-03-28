@@ -531,133 +531,197 @@ body {
 .surprise-card {
     position: relative;
     z-index: 200;
-    max-width: 520px;
+    max-width: 560px;
     width: 90%;
     background: var(--letter-bg);
     backdrop-filter: blur(2px);
-    border-radius: 48px 32px 56px 32px;
+    border-radius: 28px 32px 48px 32px;
     box-shadow: var(--shadow-gentle), 0 0 0 1px rgba(255, 210, 220, 0.5);
-    padding: 1.2rem 1.5rem 1.5rem;
+    padding: 1.5rem 1.8rem 2rem;
     transition: opacity 0.5s ease;
-    font-family: 'Segoe UI', 'Quicksand', cursive;
-    border: 1px solid rgba(255, 190, 200, 0.6);
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
-    max-height: 75vh;
+    max-height: 80vh;
     margin-bottom: 2rem;
+    color: #2c1a22;
+    letter-spacing: 0.01em;
 }
 
 .letter-header {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     flex-shrink: 0;
 }
 .letter-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #d45a7a, #b83b5e);
+    background: linear-gradient(135deg, #a54164, #7a2c48);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.2px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 .letter-header p {
-    color: #b34e6e;
-    font-size: 0.8rem;
-    opacity: 0.9;
+    color: #a14162;
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.3px;
 }
 
 .letter-message {
     background: #fffafc;
-    padding: 0.8rem;
-    border-radius: 28px;
-    margin: 0.5rem 0;
-    border-left: 6px solid #ff98b9;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #3d2a2f;
+    padding: 1rem 1.2rem;
+    border-radius: 24px;
+    margin: 0.75rem 0;
+    border-left: 5px solid #e08dab;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2e1e25;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(255,140,170,0.1);
     overflow-y: auto;
-    max-height: 180px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    max-height: 200px;
+    scrollbar-width: thin;
+    font-weight: 400;
+    font-family: inherit;
 }
 .letter-message::-webkit-scrollbar {
-    display: none;
+    width: 4px;
+    background: #ffe2ec;
+}
+.letter-message::-webkit-scrollbar-thumb {
+    background: #d47a9a;
+    border-radius: 10px;
 }
 
 .questions-area {
-    margin: 0.2rem 0 0;
+    margin: 0.5rem 0 0;
     flex-shrink: 0;
 }
 .question-header {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #b5446a;
-    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #a53f60;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 8px;
-    border-bottom: 2px dashed #ffcddc;
+    border-bottom: 2px solid #ffd4e2;
     padding-bottom: 6px;
+    letter-spacing: 0.3px;
+    font-family: 'Playfair Display', serif;
 }
 .question-text {
     font-size: 1rem;
-    font-weight: 600;
-    margin: 0.6rem 0;
-    color: #2e1b22;
-    background: #fff0f3;
-    padding: 8px 12px;
-    border-radius: 48px;
+    font-weight: 500;
+    margin: 0.8rem 0;
+    color: #352129;
+    background: #fff0f5;
+    padding: 10px 16px;
+    border-radius: 40px;
+    font-family: inherit;
+    font-style: normal;
 }
 .options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin: 0.6rem 0;
+    gap: 12px;
+    margin: 0.8rem 0;
 }
 .option-btn {
-    background: #ffe4ec;
-    border: none;
+    background: #ffeaf0;
+    border: 1px solid #ffcad9;
     padding: 8px 12px;
-    border-radius: 60px;
+    border-radius: 50px;
     font-weight: 500;
-    color: #b34062;
-    font-size: 0.8rem;
+    color: #a34162;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     text-align: center;
+    font-family: inherit;
+    letter-spacing: 0.2px;
 }
 .option-btn:hover {
-    background: #ffd0de;
+    background: #ffdee8;
     transform: scale(0.97);
-    color: #9e2e4e;
+    color: #802d4a;
+    border-color: #d486a4;
+}
+
+.modal-content {
+    background: #fffbf9;
+    border-radius: 42px;
+    max-width: 450px;
+    width: 85%;
+    padding: 20px 20px 24px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    border: 1px solid #ffe0e8;
+}
+.modal-content button {
+    margin-top: 16px;
+    padding: 10px 32px;
+    background: linear-gradient(135deg, #e48dac, #c56183);
+    color: white;
+    border: none;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px 12px rgba(197, 97, 131, 0.4);
+    transition: 0.2s;
+}
+.modal-content button:hover {
+    background: linear-gradient(135deg, #d67296, #b54a6c);
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    .surprise-card {
+        padding: 1.2rem 1.2rem 1.5rem;
+        max-width: 95%;
+    }
+    .letter-header h2 {
+        font-size: 1.6rem;
+    }
+    .question-text {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+    .option-btn {
+        font-size: 0.8rem;
+        padding: 7px 8px;
+    }
+    .letter-message {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        padding: 0.8rem 1rem;
+    }
 }
 @media (min-width: 768px) {
     .surprise-card {
-        max-width: 550px;
-        padding: 1.8rem 2rem 2rem;
-        max-height: 70vh;
+        max-width: 580px;
+        padding: 1.8rem 2.2rem 2.2rem;
     }
     .letter-header h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .question-text {
-        font-size: 1.1rem;
-        padding: 10px 16px;
+        font-size: 1.05rem;
     }
     .option-btn {
-        padding: 8px 16px;
         font-size: 0.9rem;
-    }
-    .letter-message {
-        max-height: 200px;
-        font-size: 1rem;
+        padding: 10px 14px;
     }
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
