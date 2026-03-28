@@ -1,2 +1,2 @@
-# nikkyut.github.io
+
 Nikkyut
